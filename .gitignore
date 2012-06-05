@@ -18,3 +18,5 @@ local.properties
 #Intellij Idea related files
 .idea/
 AwayDay.iml
+out/
+.DS_Store
