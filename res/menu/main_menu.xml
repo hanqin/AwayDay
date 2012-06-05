@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_widgets"
+          android:showAsAction="ifRoom|withText"
+          android:title="@string/menu_widgets"/>
+    <item android:id="@+id/menu_twitter"
+          android:showAsAction="ifRoom|withText"
+          android:title="@string/menu_twitter"/>
+    <item android:id="@+id/menu_settings"
+          android:showAsAction="ifRoom|withText"
+          android:title="@string/menu_settings"/>
+</menu>

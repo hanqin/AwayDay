@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AwayDay</string>
+    <string name="app_name">My Away Day</string>
+    <string name="menu_widgets">Widgets</string>
+    <string name="menu_twitter">Twitter</string>
+    <string name="menu_settings">Settings</string>
 </resources>
