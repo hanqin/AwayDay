@@ -8,7 +8,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import com.thoughtworks.mobile.awayday.fragments.agenda.HtmlAgendaFragment;
-import com.thoughtworks.mobile.awayday.fragments.map.HotelFragment;
+import com.thoughtworks.mobile.awayday.fragments.hotel.HotelFragment;
+import com.thoughtworks.mobile.awayday.fragments.miniawayday.MiniAwayDayFragment;
 
 public class MainActivity extends Activity {
 
@@ -30,6 +31,9 @@ public class MainActivity extends Activity {
 
         final String hotelTabClass = HotelFragment.class.getName();
         actionBar.addTab(actionBar.newTab().setText("Hotel").setTabListener(new DefaultTabListener(this, hotelTabClass, hotelTabClass)));
+
+        final String miniAwayDayClass = MiniAwayDayFragment.class.getName();
+        actionBar.addTab(actionBar.newTab().setText("Mini Away Day").setTabListener(new DefaultTabListener(this, miniAwayDayClass, miniAwayDayClass)));
     }
 
     @Override

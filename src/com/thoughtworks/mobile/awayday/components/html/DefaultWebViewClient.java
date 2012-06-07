@@ -1,4 +1,4 @@
-package com.thoughtworks.mobile.awayday.fragments.agenda;
+package com.thoughtworks.mobile.awayday.components.html;
 
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
