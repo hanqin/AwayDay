@@ -1,0 +1,107 @@
+.ui-header .ui-title {
+  margin: 0.6em 15px 0.8em;
+}
+
+div.page_title h4 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+div#content {
+  padding: 1em 4em;
+}
+
+#page_title {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+div.info_table table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.info_table table th, div.info_table table td {
+  padding: 5px 10px 5px 10px;
+}
+
+.ui-btn-inner {
+  padding: .5em 10px;
+}
+
+.ui-btn-text {
+  font-weight: normal;
+}
+
+.ui-li-divider {
+  text-align: center;
+}
+
+div#footer {
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.ui-li-has-arrow .ui-btn-inner a.ui-link-inherit {
+  padding-left: 80px;
+  padding-right: 10px;
+}
+
+#game_content {
+  padding: 0;
+}
+
+div.game_time {
+  float: left;
+  text-align: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+div.game_time img {
+  padding: 10px 5px 0px 5px;
+}
+
+div.game_time p {
+  font-size: 13px;
+  margin: 0px 5px;
+}
+
+.ui-li-has-arrow .ui-btn-inner a.ui-link-inherit {
+  padding-left: 95px;
+  padding-right: 10px;
+}
+
+#code_jam_page {
+  background: transparent url(../images/codejam.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.names p {
+  text-align: center;
+  margin: 3px 0px 5px 0px;
+  font-size: 13px;
+}
+
+div#live_content {
+  padding: 0;
+}
+
+.ui-btn-text {
+  height: 81px;
+}
+
+h3.ui-li-heading {
+  margin-top: 0;
+}
+
+#posts {
+  height: 565px;
+}
+

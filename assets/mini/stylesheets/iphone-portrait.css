@@ -1,0 +1,12 @@
+div#content {
+  padding: 1em 1.1em;
+}
+
+#map_canvas {
+  height: 260px;
+}
+
+#page_title {
+  font-size: 1em;
+}
+

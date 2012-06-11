@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>2011 Mini Away Day Xi'an</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0 user-scalable=no">
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./stylesheets/jquery.mobile-1.0.min.css" />
+    <link rel="stylesheet" href="./stylesheets/basic.css" />
+    <link rel="stylesheet" media="screen and (min-device-width: 1200px)" href="./stylesheets/laptop.css" />
+    <link rel="stylesheet" media="screen and (max-device-width: 768px) and (orientation: portrait)" href="./stylesheets/ipad-portrait.css" />
+    <link rel="stylesheet" media="screen and (max-device-width: 1024px) and (orientation: landscape)" href="./stylesheets/ipad-landscape.css" />
+    <link rel="stylesheet" media="screen and (max-device-width: 640px) and (orientation: portrait)" href="./stylesheets/iphone-portrait.css" />
+
+    <script type="text/javascript" src="./javascripts/google-maps-api.js"></script>
+    <script type="text/javascript" src="./javascripts/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="./javascripts/jquery.mobile-1.0b2.min.js"></script>
+    <script type="text/javascript" src="./javascripts/jquery.ui.map.full.min.js"></script>
+    <script type="text/javascript" src="./javascripts/jquery.ui.map.extensions.js"></script>
+
+    <script type="text/javascript">
+
+      $('#main_page').live("pagecreate", function() {
+        $('#map_canvas').gmap({'center': '34.23586446871444, 108.89258209616042'}).bind('init', function(evt, map) {
+          $('#map_canvas').gmap('option', 'zoom', 16);
+          $('#map_canvas').gmap('addMarker', {'position': map.getCenter(), 'animation': google.maps.Animation.DROP }).click(function() {
+            $('#map_canvas').gmap('openInfoWindow', { 'content': '<h3>2011 Mini Away Day</h3>Sculpting In Time, Waiting for You.<br />雕刻时光，等你来秀！<br /><br />高新区科技路55号金桥国际B-C座2楼<hr /><a href="http://g.co/maps/66wpn" target="_blank">Directions</a>'}, this);
+          });
+          $('#map_canvas').gmap('addMarker', {'position': '34.218781373896135, 108.89038871989024', 'animation': google.maps.Animation.DROP }).click(function() {
+            $('#map_canvas').gmap('openInfoWindow', { 'content': '<strong>无尽美食尽在这里哦，吃货～</strong><br /><br />唐延路王子铂金酒店<hr /><a href="http://g.co/maps/6ra76" target="_blank">Directions</a>'}, this);
+          });
+        });
+      });
+
+
+    </script>
+
+
+  </head>
+
+  <body>
+
+    <div id="main_page" data-role="page">
+
+      <div data-role="header">
+        <h1>2011 Mini Away Day Xi'an</h1>
+      </div><!-- /header -->
+
+      <div id="content" data-role="content">
+
+        <div class="page_title">
+          <h2 id="page_title">Dec 17, Sculpting In Time</h2>
+        </div><!-- /page_title -->
+
+        <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:.2em;">
+          <div id="map_canvas"></div>
+        </div>
+
+      </div><!-- /content -->
+
+      <div data-role="footer" data-id="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#sessions_page"       data-transition="slide">Sessions</a></li>
+            <li><a href="#lightning_talk_page" data-transition="slide">Lightning Talk</a></li>
+            <li><a href="#games_page"          data-transition="slide">Games</a></li>
+            <li><a href="#code_jam_page"       data-transition="slide">Code Jam</a></li>
+          </ul>
+        </div><!-- /navbar -->
+
+      </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+    <div id="sessions_page" data-role="page">
+
+      <div data-role="header">
+        <a href="#main_page" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left jqm-home ui-btn ui-btn-icon-notext ui-btn-corner-all ui-shadow ui-btn-up-f" title="Home">
+          <span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true">
+            <span class="ui-btn-text">Home</span>
+            <span class="ui-icon ui-icon-home ui-icon-shadow"></span>
+          </span>
+        </a>
+        <h1>2011 Mini Away Day Xi'an</h1>
+      </div><!-- /header -->
+
+      <div data-role="content" data-theme="b">
+
+        <div class="info_table">
+
+          <ul data-role="listview" class="ui-listview">
+
+            <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-btn ui-bar-b ui-li-has-count">
+              <h1>10:00 - 10:40</h1>
+            </li>
+
+            <li data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li">
+              <div class="ui-btn-inner ui-li" aria-hidden="true">
+                <div class="ui-btn-text">
+                  <a href="" target="_blank" class="ui-link-inherit">
+                    <img src="./images/luo_wenjing_80x80.png" alt="Luo Wenjing" class="ui-li-thumb">
+                    <h3 class="ui-li-heading">Practicing Sketch</h3>
+                    <p class="ui-li-desc"><strong>罗文静 (Luo Wenjing)</strong></p>
+                    <p class="ui-li-desc">罗姐 罗儿</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li">
+              <div class="ui-btn-inner ui-li" aria-hidden="true">
+                <div class="ui-btn-text">
+                  <a href="" target="_blank" class="ui-link-inherit">
+                    <img src="./images/hu_kai_80x80.png" alt="Hu Kai" class="ui-li-thumb">
+                    <h3 class="ui-li-heading">Leverage Google Product to Make Your Work Fast</h3>
+                    <p class="ui-li-desc"><strong>胡凯 (Hu Kai)</strong></p>
+                    <p class="ui-li-desc">凯桑 蛋蛋</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
+              <div class="ui-btn-inner ui-li" aria-hidden="true">
+                <div class="ui-btn-text">
+                  <a href="" target="_blank" class="ui-link-inherit">
+                    <img src="./images/jiao_hongyun_80x80.png" alt="Jiao Hongyun" class="ui-li-thumb">
+                    <h3 class="ui-li-heading">财务信息分享，答疑会</h3>
+                    <p class="ui-li-desc"><strong>焦红云 (Jiao Hongyun)</strong></p>
+                    <p class="ui-li-desc">阿焦</p>
+                  </a>
+                </div>
+                </span>
+              </div>
+            </li>
+
+            <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-btn ui-bar-b ui-li-has-count">
+              <h1>10:50 - 11:30</h1>
+            </li>
+
+            <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-hover-c">
+              <div class="ui-btn-inner ui-li" aria-hidden="true">
+                <div class="ui-btn-text">
+                  <a href="" target="_blank" class="ui-link-inherit">
+                    <img src="./images/praveen_80x80.png" alt="Praveen" class="ui-li-thumb">
+                    <h3 class="ui-li-heading">OZ Consultants - What Happens After 5 PM</h3>
+                    <p class="ui-li-desc"><strong>孙悟空 (Praveen)</strong></p>
+                    <p class="ui-li-desc">大圣</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li">
+              <div class="ui-btn-inner ui-li" aria-hidden="true">
+                <div class="ui-btn-text">
+                  <a href="" target="_blank" class="ui-link-inherit">
+                    <img src="./images/jin_ming_80x80.png" alt="Jin Ming" class="ui-li-thumb">
+                    <h3 class="ui-li-heading">Exploratory Testing</h3>
+                    <p class="ui-li-desc"><strong>金明 (Jin Ming)</strong></p>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li">
+              <div class="ui-btn-inner ui-li" aria-hidden="true">
+                <div class="ui-btn-text">
+                  <a href="" target="_blank" class="ui-link-inherit">
+                    <img src="./images/feng_zhichao_80x80.png" alt="Feng Zhichao" class="ui-li-thumb">
+                    <h3 class="ui-li-heading">太平洋战争</h3>
+                    <p class="ui-li-desc"><strong>冯智超 (Feng Zhichao)</strong></p>
+                    <p class="ui-li-desc">超男</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-btn ui-bar-b ui-li-has-count ui-btn-up-undefined">
+              <h1>11:40 - 12:20</h1>
+            </li>
+
+            <li data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li">
+              <div class="ui-btn-inner ui-li" aria-hidden="true">
+                <div class="ui-btn-text">
+                  <a href="" target="_blank" class="ui-link-inherit">
+                    <img src="./images/wang_xiaoshen_80x80.png" alt="Wang Xiaoshen" class="ui-li-thumb">
+                    <h3 class="ui-li-heading">寻找灵魂-台湾七天</h3>
+                    <p class="ui-li-desc"><strong>王效珅 (Wang Xiaoshen)</strong></p>
+                    <p class="ui-li-desc">小婶儿</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li data-theme="c" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-btn-up-c">
+              <div class="ui-btn-inner ui-li" aria-hidden="true">
+                <div class="ui-btn-text">
+                  <a href="" target="_blank" class="ui-link-inherit">
+                    <img src="./images/wang_zhe_80x80.png" alt="Wang Zhe" class="ui-li-thumb">
+                    <h3 class="ui-li-heading">欧洲神话 - 罗马 希腊</h3>
+                    <p class="ui-li-desc"><strong>王哲 (Wang Zhe)</strong></p>
+                    <p class="ui-li-desc">小哲子</p>
+                  </a>
+                </div>
+                </span>
+              </div>
+            </li>
+
+            <li data-theme="c" class="ui-btn ui-btn-up-c ui-btn-icon-right ui-li-has-arrow ui-li">
+              <div class="ui-btn-inner ui-li" aria-hidden="true">
+                <div class="ui-btn-text">
+                  <a href="" target="_blank" class="ui-link-inherit">
+                    <img src="./images/huang_wei_80x80.png" alt="Huang Wei" class="ui-li-thumb">
+                    <h3 class="ui-li-heading">身体语言</h3>
+                    <p class="ui-li-desc"><strong>黄伟 (Huang Wei)</strong></p>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div><!-- /info_table -->
+
+      </div><!-- /content -->
+
+      <div data-role="footer" data-id="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#sessions_page"       data-transition="slide" class="ui-btn-active ui-state-persist">Sessions</a></li>
+            <li><a href="#lightning_talk_page" data-transition="slide">Lightning Talk</a></li>
+            <li><a href="#games_page"          data-transition="slide">Games</a></li>
+            <li><a href="#code_jam_page"       data-transition="slide">Code Jam</a></li>
+          </ul>
+        </div><!-- /navbar -->
+
+      </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+    <div id="lightning_talk_page" data-role="page">
+
+      <div data-role="header">
+        <a href="#main_page" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left jqm-home ui-btn ui-btn-icon-notext ui-btn-corner-all ui-shadow ui-btn-up-f" title="Home">
+          <span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true">
+            <span class="ui-btn-text">Home</span>
+            <span class="ui-icon ui-icon-home ui-icon-shadow"></span>
+          </span>
+        </a>
+        <h1>2011 Mini Away Day Xi'an</h1>
+      </div><!-- /header -->
+
+      <div data-role="content" data-theme="b">
+
+        <div class="ui-grid-a" style="width: 245px; margin: 0 auto;">
+          <div class="ui-block-a">
+            <div class="ui-bar ui-bar-d" style="width: 120px; height:120px; padding: 0; margin: 0;">
+              <img src="./images/li_liyan_120x120.png" alt="Li Liyan" />
+            </div>
+            <div class="names">
+              <p>李力岩 (Li Liyan)</p>
+            </div>
+          </div>
+          <div class="ui-block-b">
+            <div class="ui-bar ui-bar-d" style="width: 120px; height:120px; padding: 0; margin: 0;">
+              <img src="./images/lei_lifang_120x120.png" alt="Lei Lifang" />
+            </div>
+            <div class="names">
+              <p>雷丽芳 (Lei Lifang)</p>
+            </div>
+          </div>
+          <div class="ui-block-a">
+            <div class="ui-bar ui-bar-d" style="width: 120px; height:120px; padding: 0; margin: 0;">
+              <img src="./images/ma_qiang_120x120.png" alt="Ma Qiang" />
+            </div>
+            <div class="names">
+              <p>马强 (Ma Qiang)</p>
+            </div>
+          </div>
+          <div class="ui-block-b">
+            <div class="ui-bar ui-bar-d" style="width: 120px; height:120px; padding: 0; margin: 0;">
+              <img src="./images/xie_jia_120x120.png" alt="Xie Jia" />
+            </div>
+            <div class="names">
+              <p>颉嘉 (Xie Jia)</p>
+            </div>
+          </div>
+          <div class="ui-block-a">
+            <div class="ui-bar ui-bar-d" style="width: 120px; height:120px; padding: 0; margin: 0;">
+              <img src="./images/che_kai_120x120.png" alt="Che Kai" />
+            </div>
+            <div class="names">
+              <p>车凯 (Che Kai)</p>
+            </div>
+          </div>
+          <div class="ui-block-b">
+            <div class="ui-bar ui-bar-d" style="width: 120px; height:120px; padding: 0; margin: 0;">
+              <img src="./images/jin_ming_120x120.png" alt="Jin Ming" />
+            </div>
+            <div class="names">
+              <p>金明 (Jin Ming)</p>
+            </div>
+          </div>
+          <div class="ui-block-a">
+            <div class="ui-bar ui-bar-d" style="width: 120px; height:120px; padding: 0; margin: 0;">
+              <img src="./images/hu_kai_120x120.png" alt="Hu Kai" />
+            </div>
+            <div class="names">
+              <p>胡凯 (Hu Kai)</p>
+            </div>
+          </div>
+          <div class="ui-block-b">
+            <div class="ui-bar ui-bar-d" style="width: 120px; height:120px; padding: 0; margin: 0;">
+              <img src="./images/ren_xiaojun_120x120.png" alt="Ren Xiaojun" />
+            </div>
+            <div class="names">
+              <p>任晓君 (Ren Xiaojun)</p>
+            </div>
+          </div>
+        </div><!-- /grid-c -->
+
+      </div><!-- /content -->
+
+      <div data-role="footer" data-id="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#sessions_page"       data-transition="slide">Sessions</a></li>
+            <li><a href="#lightning_talk_page" data-transition="slide" class="ui-btn-active ui-state-persist">Lightning Talk</a></li>
+            <li><a href="#games_page"          data-transition="slide">Games</a></li>
+            <li><a href="#code_jam_page"       data-transition="slide">Code Jam</a></li>
+          </ul>
+        </div><!-- /navbar -->
+
+      </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+    <div id="games_page" data-role="page">
+
+      <div data-role="header">
+        <a href="#main_page" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left jqm-home ui-btn ui-btn-icon-notext ui-btn-corner-all ui-shadow ui-btn-up-f" title="Home">
+          <span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true">
+            <span class="ui-btn-text">Home</span>
+            <span class="ui-icon ui-icon-home ui-icon-shadow"></span>
+          </span>
+        </a>
+        <h1>2011 Mini Away Day Xi'an</h1>
+      </div><!-- /header -->
+
+      <div id="game_content" data-role="content">
+
+        <div data-role="header" data-theme="b">
+          <h1>嗅事百科</h1>
+        </div>
+        <div class="ui-body ui-body-b">
+          <div class="game_time">
+            <img src="./images/xiushibaike_x80.png" />
+            <p>14:30 - 15:30</p>
+          </div>
+          <p>看看你有多了解你身边的ThoughtWorkers，尤其是他（她）有多sui。爆料就有奖，多爆多拿。最终获胜者还有米所亲自颁发的苹果笔记本哦。排名最后的将喜获和胡所合唱“纤夫的爱”的机会！！</p>
+        </div>
+
+        <div data-role="header" data-theme="b">
+          <h1>抢麦大赛TW</h1>
+        </div>
+        <div class="ui-body ui-body-b">
+          <div class="game_time">
+            <img src="./images/maikefeng_80x80.png" />
+            <p>14:30 - 15:30</p>
+          </div>
+          <p>Thoughtworks Awayday版“我爱记歌词”！70, 80, 90的记忆都在这里。获胜的前三名将有一年的域名赠送！</p>
+        </div>
+
+        <div data-role="header" data-theme="b">
+          <h1>吹气球锦标赛</h1>
+        </div>
+        <div class="ui-body ui-body-b">
+          <div class="game_time">
+            <img src="./images/chuiqiqiu_80x80.png" />
+            <p>15:45 - 16:45</p>
+          </div>
+          <p>肺活量够大吗？跟pair够默契吗？想比大小吗？快来参加吹气球锦标赛。当然我们也准备了精美的糖果礼物等着你！</p>
+        </div>
+
+      </div><!-- /content -->
+
+      <div data-role="footer" data-id="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#sessions_page"       data-transition="slide">Sessions</a></li>
+            <li><a href="#lightning_talk_page" data-transition="slide">Lightning Talk</a></li>
+            <li><a href="#games_page"          data-transition="slide" class="ui-btn-active ui-state-persist">Games</a></li>
+            <li><a href="#code_jam_page"       data-transition="slide">Code Jam</a></li>
+          </ul>
+        </div><!-- /navbar -->
+
+      </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+    <div id="code_jam_page" data-role="page">
+
+      <div data-role="header">
+        <a href="#main_page" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left jqm-home ui-btn ui-btn-icon-notext ui-btn-corner-all ui-shadow ui-btn-up-f" title="Home">
+          <span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true">
+            <span class="ui-btn-text">Home</span>
+            <span class="ui-icon ui-icon-home ui-icon-shadow"></span>
+          </span>
+        </a>
+        <h1>2011 Mini Away Day Xi'an</h1>
+      </div><!-- /header -->
+
+      <div data-role="footer" data-id="footer" data-position="fixed">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#sessions_page"       data-transition="slide">Sessions</a></li>
+            <li><a href="#lightning_talk_page" data-transition="slide">Lightning Talk</a></li>
+            <li><a href="#games_page"          data-transition="slide">Games</a></li>
+            <li><a href="#code_jam_page"       data-transition="slide" class="ui-btn-active ui-state-persist">Code Jam</a></li>
+          </ul>
+        </div><!-- /navbar -->
+
+      </div><!-- /footer -->
+
+    </div><!-- /page -->
+
+    <div id="live_page" data-role="page">
+
+      <div data-role="header">
+        <a href="#main_page" data-icon="home" data-iconpos="notext" data-direction="reverse" class="ui-btn-left jqm-home ui-btn ui-btn-icon-notext ui-btn-corner-all ui-shadow ui-btn-up-f" title="Home">
+          <span class="ui-btn-inner ui-btn-corner-all" aria-hidden="true">
+            <span class="ui-btn-text">Home</span>
+            <span class="ui-icon ui-icon-home ui-icon-shadow"></span>
+          </span>
+        </a>
+        <h1>2011 Mini Away Day Xi'an</h1>
+      </div><!-- /header -->
+
+    </div><!-- /page -->
+
+  </body>
+
+</html>
+
