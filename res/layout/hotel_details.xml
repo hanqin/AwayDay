@@ -10,30 +10,46 @@
             android:layout_height="wrap_content">
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:textColor="#00BFF2"
+                  android:textSize="16sp"
                   android:text="@string/hotel_label_english"
                 />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:textColor="#00BFF2"
+                  android:textSize="16sp"
                   android:text="@string/hotel_label_chinese"
                 />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:layout_marginTop="15dp"
+                  android:textColor="#F37737"
+                  android:textSize="12sp"
+                  android:textStyle="bold"
                   android:text="@string/hotel_label_summary"
                 />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
                   android:text="@string/hotel_label_details"
                 />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:textColor="#F37737"
+                  android:textSize="12sp"
+                  android:textStyle="bold"
+                  android:layout_marginTop="15dp"
                   android:text="@string/hotel_label_location"
                 />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
                   android:text="@string/hotel_label_location_details"
                 />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:textStyle="bold"
                   android:text="@string/hotel_label_from_city_center"
                 />
         <TextView android:layout_width="match_parent"
@@ -42,6 +58,7 @@
                 />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:textStyle="bold"
                   android:text="@string/hotel_label_from_train"
                 />
         <TextView android:layout_width="match_parent"
@@ -50,6 +67,7 @@
                 />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:textStyle="bold"
                   android:text="@string/hotel_label_from_air_port"
                 />
         <TextView android:layout_width="match_parent"
@@ -58,6 +76,7 @@
                 />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:textStyle="bold"
                   android:text="@string/hotel_label_from_dujiangyan"
                 />
         <TextView android:layout_width="match_parent"
@@ -66,6 +85,7 @@
                 />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:textStyle="bold"
                   android:text="@string/hotel_label_from_qingchengshan"
                 />
         <TextView android:layout_width="match_parent"
@@ -74,6 +94,7 @@
                 />
         <TextView android:layout_width="match_parent"
                   android:layout_height="wrap_content"
+                  android:textStyle="bold"
                   android:text="@string/hotel_label_from_express"
                 />
         <TextView android:layout_width="match_parent"
