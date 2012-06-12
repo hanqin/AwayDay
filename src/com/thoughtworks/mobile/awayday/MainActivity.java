@@ -36,12 +36,13 @@ public class MainActivity extends Activity {
         actionBar.addTab(actionBar.newTab().setText("Mini Away Day").setTabListener(new DefaultTabListener(this, miniAwayDayClass, miniAwayDayClass)));
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        final MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
-        return true;
-    }
+    //The action menu is disabled for 1st release
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        final MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.main_menu, menu);
+//        return true;
+//    }
 
     public static class DefaultTabListener implements ActionBar.TabListener {
 
