@@ -7,16 +7,22 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import com.google.android.maps.MapActivity;
+import com.google.android.maps.MapView;
 import com.thoughtworks.mobile.awayday.fragments.agenda.HtmlAgendaFragment;
 import com.thoughtworks.mobile.awayday.fragments.hotel.HotelFragment;
+import com.thoughtworks.mobile.awayday.fragments.maps.EventsOnMapFragment;
 import com.thoughtworks.mobile.awayday.fragments.miniawayday.MiniAwayDayFragment;
 
-public class MainActivity extends Activity {
+public class AwayDayActivity extends MapActivity {
+
+    private MapView mapView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        mapView = new MapView(this, getString(R.string.google_map_api_key));
         setContentView(R.layout.main_screen);
 
         final ActionBar actionBar = getActionBar();
@@ -32,17 +38,17 @@ public class MainActivity extends Activity {
         final String hotelTabClass = HotelFragment.class.getName();
         actionBar.addTab(actionBar.newTab().setText("Hotel").setTabListener(new DefaultTabListener(this, hotelTabClass, hotelTabClass)));
 
-        final String miniAwayDayClass = MiniAwayDayFragment.class.getName();
-        actionBar.addTab(actionBar.newTab().setText("Mini Away Day").setTabListener(new DefaultTabListener(this, miniAwayDayClass, miniAwayDayClass)));
+        final String mapFragmentClass = EventsOnMapFragment.class.getName();
+        actionBar.addTab(actionBar.newTab().setText("Events on Maps").setTabListener(new DefaultTabListener(this, mapFragmentClass, mapFragmentClass)));
     }
 
-    //The action menu is disabled for 1st release
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        final MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.main_menu, menu);
-//        return true;
-//    }
+    public MapView getMapView() {
+        return mapView;
+    }
+
+    protected boolean isRouteDisplayed() {
+        return false;
+    }
 
     public static class DefaultTabListener implements ActionBar.TabListener {
 
