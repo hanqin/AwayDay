@@ -32,6 +32,7 @@ public class AwayDayActivity extends MapActivity {
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setDisplayUseLogoEnabled(true);
 
+
         final String fragmentName = HtmlAgendaFragment.class.getName();
         actionBar.addTab(actionBar.newTab().setText("Agenda").setTabListener(new DefaultTabListener(this, fragmentName, fragmentName)));
 
@@ -39,7 +40,7 @@ public class AwayDayActivity extends MapActivity {
         actionBar.addTab(actionBar.newTab().setText("Hotel").setTabListener(new DefaultTabListener(this, hotelTabClass, hotelTabClass)));
 
         final String mapFragmentClass = EventsOnMapFragment.class.getName();
-        actionBar.addTab(actionBar.newTab().setText("Events on Maps").setTabListener(new DefaultTabListener(this, mapFragmentClass, mapFragmentClass)));
+        actionBar.addTab(actionBar.newTab().setText("Locations").setTabListener(new DefaultTabListener(this, mapFragmentClass, mapFragmentClass)));
     }
 
     public MapView getMapView() {

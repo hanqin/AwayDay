@@ -34,6 +34,7 @@ public class EventsOnMapFragment extends Fragment   {
         mapView.setClickable(true);
 
         final DefaultItemizedOverlay overlay = new DefaultItemizedOverlay(getResources().getDrawable(R.drawable.map_marker));
+
         mapView.getOverlays().add(overlay);
 
         final List<OverlayItem> locations = getTravelLocations();
@@ -123,9 +124,12 @@ public class EventsOnMapFragment extends Fragment   {
             return overlayItems.size();
         }
 
-        public void addOverlayItem(OverlayItem overlayItem) {
-            overlayItems.add(overlayItem);
-            populate();
+        @Override
+        public boolean onTap(GeoPoint geoPoint, MapView mapView) {
+            super.onTap(geoPoint, mapView);
+            mapView.getController().animateTo(geoPoint);
+
+            return true;
         }
     }
 
