@@ -1,27 +1,29 @@
 package com.thoughtworks.mobile.awayday.fragments.maps;
 
 import android.app.Fragment;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.MapView;
 import com.google.android.maps.OverlayItem;
 import com.thoughtworks.mobile.awayday.AwayDayActivity;
 import com.thoughtworks.mobile.awayday.R;
+import com.thoughtworks.mobile.awayday.util.DensityUtil;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import static java.util.Arrays.asList;
-
-public class EventsOnMapFragment extends Fragment   {
+public class EventsOnMapFragment extends Fragment {
 
     private MapView mapView;
+    private TextView popUpView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -33,17 +35,51 @@ public class EventsOnMapFragment extends Fragment   {
         mapView.setVisibility(View.VISIBLE);
         mapView.setClickable(true);
 
+        initOverlay();
+        initPopupView();
+
+        return mapView;
+    }
+
+    private void initPopupView() {
+        popUpView = new TextView(getActivity());
+        popUpView.setTextSize(14);
+        popUpView.setPadding(3, 1, 3, 1);
+        popUpView.setTypeface(Typeface.SANS_SERIF, Typeface.BOLD);
+        popUpView.setTextColor(Color.BLACK);
+        popUpView.setLayoutParams(new MapView.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, null, MapView.LayoutParams.BOTTOM_CENTER));
+        popUpView.setVisibility(View.GONE);
+        mapView.addView(popUpView);
+    }
+
+    private void initOverlay() {
         final DefaultItemizedOverlay overlay = new DefaultItemizedOverlay(getResources().getDrawable(R.drawable.map_marker));
-
         mapView.getOverlays().add(overlay);
-
         final List<OverlayItem> locations = getTravelLocations();
         locations.addAll(getChengduLocations());
         overlay.setOverlayItems(locations);
 
         mapView.getController().setCenter(getCenter(getChengduLocations()));
 
-        return mapView;
+        overlay.setOnItemSelectedListener(new DefaultItemizedOverlay.OnItemSelectedListener() {
+            @Override
+            public boolean onItemSelected(OverlayItem item) {
+                mapView.getController().animateTo(item.getPoint());
+                showPopupForItem(item);
+                return false;
+            }
+
+            private void showPopupForItem(OverlayItem item) {
+                popUpView.setText(item.getTitle());
+                final MapView.LayoutParams layoutParams = (MapView.LayoutParams) popUpView.getLayoutParams();
+                layoutParams.x = -DensityUtil.toPx(getResources(), 2);
+                layoutParams.y = -DensityUtil.toPx(getResources(), 32);
+                layoutParams.point = item.getPoint();
+
+                mapView.updateViewLayout(popUpView, layoutParams);
+                popUpView.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
     private List<OverlayItem> getTravelLocations() {
@@ -103,6 +139,7 @@ public class EventsOnMapFragment extends Fragment   {
     private static class DefaultItemizedOverlay extends ItemizedOverlay<OverlayItem> {
 
         private List<OverlayItem> overlayItems = new ArrayList<OverlayItem>();
+        private OnItemSelectedListener onItemSelectedListener = OnItemSelectedListener.emptyListener;
 
         public DefaultItemizedOverlay(Drawable defaultMarker) {
             super(boundCenterBottom(defaultMarker));
@@ -112,6 +149,10 @@ public class EventsOnMapFragment extends Fragment   {
             this.overlayItems.addAll(overlayItems);
             setLastFocusedIndex(-1);
             populate();
+        }
+
+        public void setOnItemSelectedListener(OnItemSelectedListener onItemSelectedListener) {
+            this.onItemSelectedListener = onItemSelectedListener;
         }
 
         @Override
@@ -125,11 +166,21 @@ public class EventsOnMapFragment extends Fragment   {
         }
 
         @Override
-        public boolean onTap(GeoPoint geoPoint, MapView mapView) {
-            super.onTap(geoPoint, mapView);
-            mapView.getController().animateTo(geoPoint);
+        protected boolean onTap(int position) {
+            super.onTap(position);
 
-            return true;
+            return onItemSelectedListener.onItemSelected(overlayItems.get(position));
+        }
+
+        public static interface OnItemSelectedListener {
+            boolean onItemSelected(OverlayItem item);
+
+            static OnItemSelectedListener emptyListener = new OnItemSelectedListener() {
+                @Override
+                public boolean onItemSelected(OverlayItem item) {
+                    return false;
+                }
+            };
         }
     }
 
