@@ -29,16 +29,18 @@ public class EventsOnMapFragment extends Fragment   {
         mapView = activity.getMapView();
         mapView.setBuiltInZoomControls(true);
         mapView.setAlwaysDrawnWithCacheEnabled(true);
-        mapView.getController().setZoom(6);
+        mapView.getController().setZoom(10);
         mapView.setVisibility(View.VISIBLE);
         mapView.setClickable(true);
 
         final DefaultItemizedOverlay overlay = new DefaultItemizedOverlay(getResources().getDrawable(R.drawable.map_marker));
         mapView.getOverlays().add(overlay);
 
-        final List<OverlayItem> travelLocations = getTravelLocations();
-        overlay.setOverlayItems(travelLocations);
-        mapView.getController().setCenter(getCenter(travelLocations));
+        final List<OverlayItem> locations = getTravelLocations();
+        locations.addAll(getChengduLocations());
+        overlay.setOverlayItems(locations);
+
+        mapView.getController().setCenter(getCenter(getChengduLocations()));
 
         return mapView;
     }
@@ -48,6 +50,11 @@ public class EventsOnMapFragment extends Fragment   {
         result.add(new OverlayItem(new GeoPoint(40088211, 116603407), "首都国际机场T3航站楼", "首都国际机场T3航站楼"));
         result.add(new OverlayItem(new GeoPoint(34449163, 108773703), "咸阳国际机场2号航站楼", "咸阳国际机场2号航站楼"));
         result.add(new OverlayItem(new GeoPoint(31162951, 121809631), "浦东国际机场", "浦东国际机场"));
+        return result;
+    }
+
+    private List<OverlayItem> getChengduLocations() {
+        final ArrayList<OverlayItem> result = new ArrayList<OverlayItem>();
         result.add(new OverlayItem(new GeoPoint(30581395, 103967956), "双流国际机场", "双流国际机场"));
         result.add(new OverlayItem(new GeoPoint(30904029, 103600712), "青城山", "青城山"));
         result.add(new OverlayItem(new GeoPoint(30900527, 103606952), "青城豪生国际酒店", "青城豪生国际酒店"));
