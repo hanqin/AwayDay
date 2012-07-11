@@ -36,9 +36,6 @@ public class AwayDayActivity extends MapActivity {
         final String fragmentName = HtmlAgendaFragment.class.getName();
         actionBar.addTab(actionBar.newTab().setText("Agenda").setTabListener(new DefaultTabListener(this, fragmentName, fragmentName)));
 
-        final String hotelTabClass = HotelFragment.class.getName();
-        actionBar.addTab(actionBar.newTab().setText("Hotel").setTabListener(new DefaultTabListener(this, hotelTabClass, hotelTabClass)));
-
         final String mapFragmentClass = EventsOnMapFragment.class.getName();
         actionBar.addTab(actionBar.newTab().setText("Locations").setTabListener(new DefaultTabListener(this, mapFragmentClass, mapFragmentClass)));
     }

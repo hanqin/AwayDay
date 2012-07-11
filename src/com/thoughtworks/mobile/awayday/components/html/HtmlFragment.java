@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import com.thoughtworks.mobile.awayday.R;
+import com.thoughtworks.mobile.awayday.components.EventSelectedHandlerFactory;
 
 public abstract class HtmlFragment extends Fragment {
 
@@ -17,7 +18,10 @@ public abstract class HtmlFragment extends Fragment {
 
         webView.setWebViewClient(new DefaultWebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
+        webView.addJavascriptInterface(new EventSelectedHandlerFactory(getActivity()), "eventHandler");
+
         webView.loadUrl(getUrl());
+
         return resultView;
     }
 
