@@ -8,10 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Gallery;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.*;
 import com.thoughtworks.mobile.awayday.R;
 
 import java.io.IOException;
@@ -25,30 +22,10 @@ public class HotelFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final LinearLayout linearLayout = new LinearLayout(getActivity());
-        linearLayout.setOrientation(VERTICAL);
-        linearLayout.setPadding(5, 15, 5, 0);
-        linearLayout.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-
-        linearLayout.addView(portraitGallery());
-        linearLayout.addView(detailView(inflater));
-        return linearLayout;
-    }
-
-    private View detailView(LayoutInflater inflater) {
-        final ViewGroup resultView = (ViewGroup) inflater.inflate(R.layout.hotel_details, null);
-        resultView.setPadding(15, 10, 10, 0);
-        return resultView;
-    }
-
-    private Gallery portraitGallery() {
-        final Gallery gallery = new Gallery(getActivity());
-        gallery.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        gallery.setUnselectedAlpha(1.0f);
-
-        gallery.setSpacing(10);
+        final View resultView = inflater.inflate(R.layout.hotel_details, null);
+        final Gallery gallery = (Gallery) resultView.findViewById(R.id.event_gallery);
         gallery.setAdapter(new ImageAdapter());
-        return gallery;
+        return resultView;
     }
 
     private static class ImageAdapter extends BaseAdapter {

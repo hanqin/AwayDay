@@ -1,3 +1,4 @@
 <resources>
     <color name="map_pop_up_corner">#cc2e2e2e</color>
+    <color name="event_details_divider_color">#cc2e2e2e</color>
 </resources>

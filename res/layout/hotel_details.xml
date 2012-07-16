@@ -1,105 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:scrollbars="none"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-        <TextView android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:paddingLeft="5dp"
+                android:paddingTop="15dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <ScrollView android:scrollbars="none"
+                android:layout_above="@+id/hotel_details_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            <Gallery android:id="@+id/event_gallery"
+                     android:unselectedAlpha="1"
+                     android:layout_height="match_parent"
+                     android:layout_width="match_parent"
+                     android:spacing="10dp"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="#00BFF2"
+                      android:textSize="16sp"
+                      android:text="@string/hotel_label_english"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="#00BFF2"
+                      android:textSize="16sp"
+                      android:text="@string/hotel_label_chinese"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="15dp"
+                      android:textColor="#F37737"
+                      android:textSize="12sp"
+                      android:textStyle="bold"
+                      android:text="@string/hotel_label_summary"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:text="@string/hotel_label_details"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="#F37737"
+                      android:textSize="12sp"
+                      android:textStyle="bold"
+                      android:layout_marginTop="15dp"
+                      android:text="@string/hotel_label_location"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:text="@string/hotel_label_location_details"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+                      android:textStyle="bold"
+                      android:text="@string/hotel_label_from_city_center"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/hotel_label_from_city_center_value"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textStyle="bold"
+                      android:text="@string/hotel_label_from_train"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/hotel_label_from_train_value"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textStyle="bold"
+                      android:text="@string/hotel_label_from_air_port"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/hotel_label_from_air_port_value"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textStyle="bold"
+                      android:text="@string/hotel_label_from_dujiangyan"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/hotel_label_from_dujiangyan_value"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textStyle="bold"
+                      android:text="@string/hotel_label_from_qingchengshan"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/hotel_label_from_qingchengshan_value"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textStyle="bold"
+                      android:text="@string/hotel_label_from_express"
+                    />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/hotel_label_from_express_value"
+                    />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/hotel_details_tool_bar"
+                  android:layout_alignParentBottom="true"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:textColor="#00BFF2"
-                  android:textSize="16sp"
-                  android:text="@string/hotel_label_english"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:textColor="#00BFF2"
-                  android:textSize="16sp"
-                  android:text="@string/hotel_label_chinese"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_marginTop="15dp"
-                  android:textColor="#F37737"
+                  android:paddingRight="10dp"
+                  android:layout_gravity="center_vertical"
                   android:textSize="12sp"
-                  android:textStyle="bold"
-                  android:text="@string/hotel_label_summary"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_marginTop="10dp"
-                  android:text="@string/hotel_label_details"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:textColor="#F37737"
-                  android:textSize="12sp"
-                  android:textStyle="bold"
-                  android:layout_marginTop="15dp"
-                  android:text="@string/hotel_label_location"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_marginTop="10dp"
-                  android:text="@string/hotel_label_location_details"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_marginTop="10dp"
-                  android:textStyle="bold"
-                  android:text="@string/hotel_label_from_city_center"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="@string/hotel_label_from_city_center_value"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:textStyle="bold"
-                  android:text="@string/hotel_label_from_train"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="@string/hotel_label_from_train_value"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:textStyle="bold"
-                  android:text="@string/hotel_label_from_air_port"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="@string/hotel_label_from_air_port_value"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:textStyle="bold"
-                  android:text="@string/hotel_label_from_dujiangyan"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="@string/hotel_label_from_dujiangyan_value"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:textStyle="bold"
-                  android:text="@string/hotel_label_from_qingchengshan"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="@string/hotel_label_from_qingchengshan_value"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:textStyle="bold"
-                  android:text="@string/hotel_label_from_express"
-                />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="@string/hotel_label_from_express_value"
-                />
+                  android:text="@string/remind_me"/>
+        <TextView android:layout_height="wrap_content"
+                  android:drawableRight="@drawable/ic_add_to_cal"
+                  android:drawablePadding="5dp"
+                  android:layout_gravity="center_vertical"
+                  android:gravity="center_vertical"
+                  android:textSize="14sp"
+                  android:text="September 14, 12:00 PM"
+                  android:layout_weight="1"
+                  android:layout_width="0dp"/>
     </LinearLayout>
-</ScrollView>
+</RelativeLayout>
