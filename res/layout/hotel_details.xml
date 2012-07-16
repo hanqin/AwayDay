@@ -8,7 +8,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
     <ScrollView android:scrollbars="none"
-                android:layout_above="@+id/hotel_details_tool_bar"
+                android:layout_above="@+id/hotel_details_reminder_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
         <LinearLayout
@@ -117,7 +117,7 @@
         </LinearLayout>
     </ScrollView>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:id="@+id/hotel_details_tool_bar"
+                  android:id="@+id/hotel_details_reminder_bar"
                   android:layout_alignParentBottom="true"
                   android:orientation="horizontal"
                   android:layout_width="fill_parent"
