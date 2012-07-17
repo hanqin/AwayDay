@@ -118,7 +118,8 @@
     </ScrollView>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:id="@+id/hotel_details_reminder_bar"
-                  android:layout_alignParentBottom="true"
+                  android:layout_above="@+id/calendar_details"
+                  android:layout_alignWithParentIfMissing="true"
                   android:orientation="horizontal"
                   android:layout_width="fill_parent"
                   android:layout_height="wrap_content">
@@ -138,4 +139,9 @@
                   android:layout_weight="1"
                   android:layout_width="0dp"/>
     </LinearLayout>
+    <ListView android:id="@+id/calendar_details"
+              android:layout_width="match_parent"
+              android:layout_height="90dp"
+              android:layout_alignParentBottom="true"
+              android:visibility="gone"/>
 </RelativeLayout>
