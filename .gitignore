@@ -20,3 +20,4 @@ local.properties
 AwayDay.iml
 out/
 .DS_Store
+bootstrap/EmulatorBuilder.jar

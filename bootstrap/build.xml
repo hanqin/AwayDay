@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AwayDay" default="setup">
+    <property environment="env"/>
+    <property name="DEFAULT_EMULATOR_NAME" value="Google_15_WVGA"/>
+
+    <target name="setup" depends="generate_local_properties_file, download_builder, create_emulator, start_emulator">
+        <fail message="$ANDROID_HOME not set." unless="env.ANDROID_HOME"/>
+    </target>
+
+    <target name="generate_local_properties_file">
+        <echo file="../local.properties">sdk.dir=${env.ANDROID_HOME}</echo>
+    </target>
+
+    <target name="download_builder">
+        <get src="http://cloud.github.com/downloads/hanqin/android-emulator-build/EmulatorBuilder.jar"
+             dest="./EmulatorBuilder.jar" usetimestamp="true"/>
+    </target>
+
+    <target name="create_emulator">
+        <java jar="EmulatorBuilder.jar" fork="true">
+            <arg value="${env.ANDROID_HOME}"/>
+            <arg value="${DEFAULT_EMULATOR_NAME}"/>
+            <arg value="17"/>
+        </java>
+    </target>
+
+    <target name="start_emulator">
+        <exec executable="${env.ANDROID_HOME}/tools/emulator" spawn="true">
+            <arg value="@${DEFAULT_EMULATOR_NAME}"/>
+        </exec>
+    </target>
+</project>
