@@ -13,6 +13,7 @@ import com.thoughtworks.mobile.awayday.fragments.agenda.HtmlAgendaFragment;
 import com.thoughtworks.mobile.awayday.fragments.hotel.HotelFragment;
 import com.thoughtworks.mobile.awayday.fragments.maps.EventsOnMapFragment;
 import com.thoughtworks.mobile.awayday.fragments.miniawayday.MiniAwayDayFragment;
+import com.thoughtworks.mobile.awayday.fragments.timeline.PathFragment;
 
 public class AwayDayActivity extends MapActivity {
 
@@ -36,8 +37,8 @@ public class AwayDayActivity extends MapActivity {
         final String fragmentName = HtmlAgendaFragment.class.getName();
         actionBar.addTab(actionBar.newTab().setText("Agenda").setTabListener(new DefaultTabListener(this, fragmentName, fragmentName)));
 
-        final String mapFragmentClass = EventsOnMapFragment.class.getName();
-        actionBar.addTab(actionBar.newTab().setText("Locations").setTabListener(new DefaultTabListener(this, mapFragmentClass, mapFragmentClass)));
+        final String pathFragmentClass = PathFragment.class.getName();
+        actionBar.addTab(actionBar.newTab().setText("Path").setTabListener(new DefaultTabListener(this, pathFragmentClass, pathFragmentClass)));
     }
 
     public MapView getMapView() {

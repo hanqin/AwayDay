@@ -1,4 +1,4 @@
-package com.thoughtworks.mobile.awayday.fragments.hotel;
+package com.thoughtworks.mobile.awayday.fragments.timeline;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -15,10 +15,7 @@ import java.io.InputStream;
 import static android.graphics.drawable.Drawable.createFromStream;
 import static com.thoughtworks.mobile.awayday.util.DensityUtil.toPx;
 
-public class ImageAdapter extends BaseAdapter {
-
-    public static final int DEFAULT_THUMBNAIL_WIDTH_IN_DP = 270;
-    public static final int DEFAULT_THUMBNAIL_HEIGHT_IN_DP = 216;
+public class TimeLineImageAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
@@ -47,13 +44,10 @@ public class ImageAdapter extends BaseAdapter {
 
         final Drawable imageDrawable = getDrawableOf(parent.getContext(), fileName);
         resultView.setImageDrawable(imageDrawable);
-        resultView.setPadding(10, 10, 10, 10);
         resultView.setBackgroundColor(Color.WHITE);
 
-        final int width = toPx(parent.getResources(), DEFAULT_THUMBNAIL_WIDTH_IN_DP);
-        final int height = toPx(parent.getResources(), DEFAULT_THUMBNAIL_HEIGHT_IN_DP);
-        resultView.setLayoutParams(new Gallery.LayoutParams(width, height));
-        resultView.setScaleType(ImageView.ScaleType.FIT_XY);
+        resultView.setLayoutParams(new Gallery.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        resultView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 
         return resultView;
     }

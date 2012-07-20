@@ -22,14 +22,23 @@ import java.util.TimerTask;
 
 public abstract class HtmlFragment extends Fragment {
 
+    private ListView weiboListView;
+    private Timer timer;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View resultView = inflater.inflate(R.layout.html_fragment, container, false);
         final WebView webView = (WebView) resultView.findViewById(R.id.web_view);
         initWebView(webView);
-        final ListView weiboListView = (ListView) resultView.findViewById(R.id.weibo_list);
+        weiboListView = (ListView) resultView.findViewById(R.id.weibo_list);
         initWeiboView(weiboListView);
-        final Timer timer = new Timer();
+
+        return resultView;
+    }
+
+    @Override
+    public void onResume() {
+        timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
             int i = 0;
 
@@ -39,7 +48,14 @@ public abstract class HtmlFragment extends Fragment {
                 weiboListView.smoothScrollToPosition(i++ % count);
             }
         }, 3000, 3000);
-        return resultView;
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        timer.cancel();
+        timer = null;
+        super.onPause();
     }
 
     private void initWeiboView(ListView weiboListView) {
