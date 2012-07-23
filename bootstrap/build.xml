@@ -8,7 +8,7 @@
     </target>
 
     <target name="generate_local_properties_file">
-        <echo file="../local.properties">sdk.dir=${env.ANDROID_HOME}</echo>
+        <echo file="../AwayDay_Core/local.properties">sdk.dir=${env.ANDROID_HOME}</echo>
     </target>
 
     <target name="download_builder">
