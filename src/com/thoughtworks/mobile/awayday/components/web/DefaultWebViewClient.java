@@ -1,4 +1,4 @@
-package com.thoughtworks.mobile.awayday.components.html;
+package com.thoughtworks.mobile.awayday.components.web;
 
 import android.webkit.WebView;
 import android.webkit.WebViewClient;

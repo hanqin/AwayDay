@@ -1,4 +1,4 @@
-package com.thoughtworks.mobile.awayday.components.html;
+package com.thoughtworks.mobile.awayday.fragments.agenda;
 
 public interface EventSelectedHandler {
 

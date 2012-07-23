@@ -1,10 +1,8 @@
-package com.thoughtworks.mobile.awayday.components;
+package com.thoughtworks.mobile.awayday.fragments.agenda;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
-import com.thoughtworks.mobile.awayday.components.html.EventSelectedHandler;
 
 public class EventSelectedHandlerFactory implements EventSelectedHandler {
 

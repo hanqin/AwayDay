@@ -1,9 +1,8 @@
-package com.thoughtworks.mobile.awayday.components;
+package com.thoughtworks.mobile.awayday.fragments.agenda;
 
 import android.content.Context;
 import android.content.Intent;
 import com.thoughtworks.mobile.awayday.EventDetailsActivity;
-import com.thoughtworks.mobile.awayday.components.html.EventSelectedHandler;
 import com.thoughtworks.mobile.awayday.fragments.hotel.HotelFragment;
 import com.thoughtworks.mobile.awayday.util.FragmentConstants;
 

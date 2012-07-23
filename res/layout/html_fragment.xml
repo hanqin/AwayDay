@@ -5,11 +5,11 @@
     android:layout_height="fill_parent"
     android:paddingTop="1dp"
     >
-    <WebView android:layout_height="0dp"
+    <com.thoughtworks.mobile.awayday.components.web.AgendaWebView android:layout_height="0dp"
              android:layout_width="match_parent"
              android:layout_weight="1"
              android:id="@+id/web_view"/>
-    <ListView android:id="@+id/weibo_list"
+    <com.thoughtworks.mobile.awayday.components.list.WeiboView android:id="@+id/weibo_list"
               android:scrollbars="none"
               android:layout_height="45dp"
               android:layout_width="match_parent"/>
