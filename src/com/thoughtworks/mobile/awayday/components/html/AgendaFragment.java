@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public abstract class HtmlFragment extends Fragment {
+public class AgendaFragment extends Fragment {
 
     private ListView weiboListView;
     private Timer timer;
@@ -106,6 +106,8 @@ public abstract class HtmlFragment extends Fragment {
         webView.loadUrl(getUrl());
     }
 
-    protected abstract String getUrl();
+    protected String getUrl() {
+        return "file:///android_asset/agenda/index.html";
+    }
 
 }

@@ -5,14 +5,9 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
-import com.thoughtworks.mobile.awayday.fragments.agenda.HtmlAgendaFragment;
-import com.thoughtworks.mobile.awayday.fragments.hotel.HotelFragment;
-import com.thoughtworks.mobile.awayday.fragments.maps.EventsOnMapFragment;
-import com.thoughtworks.mobile.awayday.fragments.miniawayday.MiniAwayDayFragment;
+import com.thoughtworks.mobile.awayday.components.html.AgendaFragment;
 import com.thoughtworks.mobile.awayday.fragments.timeline.PathFragment;
 
 public class AwayDayActivity extends MapActivity {
@@ -34,7 +29,7 @@ public class AwayDayActivity extends MapActivity {
         actionBar.setDisplayUseLogoEnabled(true);
 
 
-        final String fragmentName = HtmlAgendaFragment.class.getName();
+        final String fragmentName = AgendaFragment.class.getName();
         actionBar.addTab(actionBar.newTab().setText("Agenda").setTabListener(new DefaultTabListener(this, fragmentName, fragmentName)));
 
         final String pathFragmentClass = PathFragment.class.getName();
