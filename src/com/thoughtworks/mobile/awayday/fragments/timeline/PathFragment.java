@@ -58,12 +58,21 @@ public class PathFragment extends Fragment {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            final LayoutInflater inflater = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            final View itemView = inflater.inflate(R.layout.activity_history_item_with_gallery, null);
+            final View itemView;
+            if (convertView == null) {
+                final LayoutInflater inflater = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                itemView = inflater.inflate(R.layout.activity_history_item_with_gallery, null);
+            } else {
+                itemView = convertView;
+            }
+
             final TextView title = (TextView) itemView.findViewById(R.id.activity_title);
             title.setText(activities.get(position));
+            final Gallery gallery = (Gallery) itemView.findViewById(R.id.activity_images);
+            gallery.setVisibility(View.GONE);
+            itemView.setOnClickListener(null);
+
             if (position == 1) {
-                final Gallery gallery = (Gallery) itemView.findViewById(R.id.activity_images);
                 gallery.setVisibility(View.VISIBLE);
                 gallery.setAdapter(new TimeLineImageAdapter());
                 gallery.setSelection(activities.size() - 1);
