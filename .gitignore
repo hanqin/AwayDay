@@ -17,7 +17,10 @@ local.properties
 
 #Intellij Idea related files
 .idea/
-AwayDay.iml
+*.iml
 out/
 .DS_Store
+
+#Helpers
 bootstrap/EmulatorBuilder.jar
+
