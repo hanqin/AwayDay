@@ -38,5 +38,6 @@
     <string name="contact_setting_hint_email">Your Email</string>
     <string name="contact_setting_hint_skype">Your Skype</string>
     <string name="contact_setting_hint_weibo">Your Weibo</string>
+    <string name="contact_save">Save</string>
 
 </resources>

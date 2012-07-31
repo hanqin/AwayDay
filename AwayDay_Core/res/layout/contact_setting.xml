@@ -20,6 +20,8 @@
                   android:layout_width="fill_parent"
                   android:id="@+id/contact_setting_name_edit_text"
                   android:hint="@string/contact_setting_hint_name"
+                  android:singleLine="true"
+                  android:imeOptions="actionNext"
 
                 />
     </LinearLayout>
@@ -38,6 +40,9 @@
                   android:layout_width="fill_parent"
                   android:id="@+id/contact_setting_phone_edit_text"
                   android:hint="@string/contact_setting_hint_phone"
+                  android:numeric="integer"
+                  android:singleLine="true"
+                  android:imeOptions="actionNext"
 
                 />
     </LinearLayout>
@@ -56,6 +61,8 @@
                   android:layout_width="fill_parent"
                   android:id="@+id/contact_setting_email_edit_text"
                   android:hint="@string/contact_setting_hint_email"
+                  android:singleLine="true"
+                  android:imeOptions="actionNext"
 
                 />
     </LinearLayout>
@@ -75,7 +82,8 @@
                   android:layout_width="fill_parent"
                   android:id="@+id/contact_setting_skype_edit_text"
                   android:hint="@string/contact_setting_hint_skype"
-
+                  android:singleLine="true"
+                  android:imeOptions="actionNext"
                 />
     </LinearLayout>
 
@@ -95,6 +103,8 @@
                   android:layout_width="fill_parent"
                   android:id="@+id/contact_setting_weibo_edit_text"
                   android:hint="@string/contact_setting_hint_weibo"
+                  android:singleLine="true"
+                  android:imeOptions="actionDone"
                 />
     </LinearLayout>
 </LinearLayout>

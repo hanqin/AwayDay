@@ -3,9 +3,13 @@ package com.thoughtworks.mobile.awayday.fragments.contacts.views;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ViewFlipper;
+import com.google.zxing.WriterException;
 import com.thoughtworks.mobile.awayday.R;
+import com.thoughtworks.mobile.awayday.fragments.contacts.Utils;
 
 public abstract class AbstractContactView {
 
@@ -32,7 +36,7 @@ public abstract class AbstractContactView {
         this.view = layoutInflater.inflate(layout, null);
     }
     protected void initBackButton() {
-        LinearLayout backButton = (LinearLayout) view.findViewById(R.id.location_detail_back);
+        LinearLayout backButton = (LinearLayout) view.findViewById(R.id.contact_back);
         backButton.setClickable(true);
 
         View.OnClickListener detailBackOnClickListener = new View.OnClickListener() {
@@ -44,5 +48,17 @@ public abstract class AbstractContactView {
         backButton.setOnClickListener(detailBackOnClickListener);
         View back = view.findViewById(R.id.location_detail_btn_back);
         back.setOnClickListener(detailBackOnClickListener);
+    }
+
+    protected void initQrCode(String contactInfo, View contactMainView) {
+        ImageView codeImageView = (ImageView) contactMainView.findViewById(R.id.qr_code_image_view);
+        ViewGroup.LayoutParams layoutParams = codeImageView.getLayoutParams();
+        layoutParams.height = 300;
+        layoutParams.width = 300;
+        try {
+            codeImageView.setImageBitmap(Utils.create2DCode(contactInfo));
+        } catch (WriterException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 }

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ViewFlipper;
 import com.thoughtworks.mobile.awayday.R;
 import com.thoughtworks.mobile.awayday.fragments.contacts.views.ContactMainView;
@@ -23,6 +22,9 @@ public class ContactsFragment extends Fragment {
         ContactSettingView contactSettingView = new ContactSettingView(getActivity(), viewFilpper);
         viewFilpper.addView(contactSettingView.getView());
 
+        if(Utils.isFileNotExist(getActivity())){
+            viewFilpper.setDisplayedChild(1);
+        }
         return pathView;
     }
 }
