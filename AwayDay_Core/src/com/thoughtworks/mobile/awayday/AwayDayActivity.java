@@ -6,6 +6,7 @@ import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
 import com.thoughtworks.mobile.awayday.fragments.agenda.AgendaFragment;
 import com.thoughtworks.mobile.awayday.components.tabs.DefaultTabListener;
+import com.thoughtworks.mobile.awayday.fragments.contacts.ContactsFragment;
 import com.thoughtworks.mobile.awayday.fragments.timeline.PathFragment;
 
 public class AwayDayActivity extends MapActivity {
@@ -32,6 +33,9 @@ public class AwayDayActivity extends MapActivity {
 
         final String pathFragmentClass = PathFragment.class.getName();
         actionBar.addTab(actionBar.newTab().setText("Path").setTabListener(new DefaultTabListener(this, pathFragmentClass, pathFragmentClass)));
+
+        String contactsFragmentClass = ContactsFragment.class.getName();
+        actionBar.addTab(actionBar.newTab().setText("Contact").setTabListener(new DefaultTabListener(this, contactsFragmentClass, contactsFragmentClass)));
     }
 
     public MapView getMapView() {

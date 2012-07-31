@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+    <include layout="@layout/away_day_navigation_bar"/>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dip"
+                  android:paddingRight="5dip">
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="100dip"
+                  android:text="@string/contact_setting_name"
+                  android:gravity="right|center_horizontal"
+                  android:layout_gravity="bottom"
+                  android:paddingRight="10dip"/>
+        <EditText android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/contact_setting_name_edit_text"
+                  android:hint="@string/contact_setting_hint_name"
+
+                />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dip"
+                  android:paddingRight="5dip">
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="100dip"
+                  android:text="@string/contact_setting_phone"
+                  android:gravity="right|center_horizontal"
+                  android:layout_gravity="bottom"
+                  android:paddingRight="10dip"/>
+        <EditText android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/contact_setting_phone_edit_text"
+                  android:hint="@string/contact_setting_hint_phone"
+
+                />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dip"
+                  android:paddingRight="5dip">
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="100dip"
+                  android:text="@string/contact_setting_email"
+                  android:gravity="right|center_horizontal"
+                  android:layout_gravity="bottom"
+                  android:paddingRight="10dip"/>
+        <EditText android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/contact_setting_email_edit_text"
+                  android:hint="@string/contact_setting_hint_email"
+
+                />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dip"
+                  android:paddingRight="5dip">
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="100dip"
+                  android:text="@string/contact_setting_skype"
+                  android:gravity="right|center_horizontal"
+                  android:layout_gravity="bottom"
+                  android:paddingRight="10dip"
+                  android:layout_marginBottom="3dip"/>
+        <EditText android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/contact_setting_skype_edit_text"
+                  android:hint="@string/contact_setting_hint_skype"
+
+                />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dip"
+                  android:paddingRight="5dip">
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="100dip"
+                  android:text="@string/contact_setting_weibo"
+                  android:gravity="right|center_horizontal"
+                  android:layout_gravity="bottom"
+                  android:paddingRight="10dip"
+                  android:layout_marginBottom="3dip"/>
+        <EditText android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/contact_setting_weibo_edit_text"
+                  android:hint="@string/contact_setting_hint_weibo"
+                />
+    </LinearLayout>
+</LinearLayout>

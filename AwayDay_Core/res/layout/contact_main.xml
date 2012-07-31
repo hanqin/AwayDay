@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:orientation="vertical"
+              android:layout_height="fill_parent">
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fff">
+        <ImageView android:id="@+id/qr_code_image_view" android:layout_width="30dip" android:layout_height="30dip"
+                   android:layout_centerVertical="true"
+                   android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center|center_horizontal">
+        <Button android:id="@+id/contacts_setting"
+                android:text="@string/contact_setting"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+        <Button android:id="@+id/contacts_scan"
+                android:text="@string/contact_scan"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+        <Button android:id="@+id/contacts_check_in"
+                android:text="@string/contact_check_in"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                />
+    </LinearLayout>
+</LinearLayout>

@@ -25,4 +25,18 @@
     <string name="google_map_api_key">07kQJecEFhkp6kAzGwIzIwPbp7y8IkW_yOUovOA</string>
     <string name="remind_me">Remind Me:</string>
     <string name="images_header">images header</string>
+    <string name="contact_setting">Setting</string>
+    <string name="contact_scan">Scan</string>
+    <string name="contact_check_in">Check In</string>
+    <string name="contact_setting_name">Name:</string>
+    <string name="contact_setting_phone">Phone:</string>
+    <string name="contact_setting_email">Email:</string>
+    <string name="contact_setting_skype">Skype:</string>
+    <string name="contact_setting_weibo">Weibo:</string>
+    <string name="contact_setting_hint_name">Your Name</string>
+    <string name="contact_setting_hint_phone">Your Phone</string>
+    <string name="contact_setting_hint_email">Your Email</string>
+    <string name="contact_setting_hint_skype">Your Skype</string>
+    <string name="contact_setting_hint_weibo">Your Weibo</string>
+
 </resources>
