@@ -22,11 +22,16 @@ public class ContactMainView extends AbstractContactView {
     }
 
     private void initButtons() {
-        Button contactSetting = (Button) view.findViewById(R.id.contacts_setting);
+        setButtonListener(R.id.contacts_setting, 1);
+        setButtonListener(R.id.contacts_scan, 2);
+    }
+
+    private void setButtonListener(int buttonId, final int switchViewIndex) {
+        Button contactSetting = (Button) view.findViewById(buttonId);
         contactSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                viewFlipper.setDisplayedChild(1);
+                viewFlipper.setDisplayedChild(switchViewIndex);
             }
         });
     }

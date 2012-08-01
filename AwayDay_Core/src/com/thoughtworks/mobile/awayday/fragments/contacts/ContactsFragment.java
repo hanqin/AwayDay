@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ViewFlipper;
 import com.thoughtworks.mobile.awayday.R;
 import com.thoughtworks.mobile.awayday.fragments.contacts.views.ContactMainView;
+import com.thoughtworks.mobile.awayday.fragments.contacts.views.ContactScanView;
 import com.thoughtworks.mobile.awayday.fragments.contacts.views.ContactSettingView;
 
 public class ContactsFragment extends Fragment {
@@ -21,6 +22,9 @@ public class ContactsFragment extends Fragment {
         viewFilpper.addView(contactMainView.getView());
         ContactSettingView contactSettingView = new ContactSettingView(getActivity(), viewFilpper);
         viewFilpper.addView(contactSettingView.getView());
+        ContactScanView contactScanView = new ContactScanView(getActivity(), viewFilpper);
+        viewFilpper.addView(contactScanView.getView());
+
 
         if(Utils.isFileNotExist(getActivity())){
             viewFilpper.setDisplayedChild(1);
