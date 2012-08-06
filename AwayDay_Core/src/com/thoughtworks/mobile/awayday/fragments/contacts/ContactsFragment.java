@@ -22,8 +22,8 @@ public class ContactsFragment extends Fragment {
         viewFilpper.addView(contactMainView.getView());
         ContactSettingView contactSettingView = new ContactSettingView(getActivity(), viewFilpper);
         viewFilpper.addView(contactSettingView.getView());
-        ContactScanView contactScanView = new ContactScanView(getActivity(), viewFilpper);
-        viewFilpper.addView(contactScanView.getView());
+//        ContactScanView contactScanView = new ContactScanView(getActivity(), viewFilpper);
+//        viewFilpper.addView(contactScanView.getView());
 
 
         if(Utils.isFileNotExist(getActivity())){

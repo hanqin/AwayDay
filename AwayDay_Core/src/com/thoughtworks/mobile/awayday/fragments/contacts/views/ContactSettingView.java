@@ -64,9 +64,16 @@ public class ContactSettingView extends AbstractContactView {
                         emailEditText.getText().toString(),
                         skypeEditText.getText().toString(),
                         weiboEditText.getText().toString());
-                Utils.saveContactInfos(context,contactInfos);
-                ((InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE))
-                        .hideSoftInputFromWindow(((Activity) context).getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                Utils.saveContactInfos(context, contactInfos);
+                try {
+                    InputMethodManager inputMethodSystemService = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
+                    if (inputMethodSystemService.isActive()) {
+                        inputMethodSystemService
+                                .hideSoftInputFromWindow(((Activity) context).getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 initQrCode(contactInfos, viewFlipper.getChildAt(0));
                 viewFlipper.setDisplayedChild(0);
             }

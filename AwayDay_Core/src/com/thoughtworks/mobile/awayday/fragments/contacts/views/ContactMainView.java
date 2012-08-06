@@ -1,10 +1,12 @@
 package com.thoughtworks.mobile.awayday.fragments.contacts.views;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ViewFlipper;
 import com.thoughtworks.mobile.awayday.R;
+import com.thoughtworks.mobile.awayday.fragments.contacts.ScanActivity;
 import com.thoughtworks.mobile.awayday.fragments.contacts.Utils;
 
 public class ContactMainView extends AbstractContactView {
@@ -23,7 +25,14 @@ public class ContactMainView extends AbstractContactView {
 
     private void initButtons() {
         setButtonListener(R.id.contacts_setting, 1);
-        setButtonListener(R.id.contacts_scan, 2);
+        Button contactSetting = (Button) view.findViewById(R.id.contacts_scan);
+        contactSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ScanActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     private void setButtonListener(int buttonId, final int switchViewIndex) {

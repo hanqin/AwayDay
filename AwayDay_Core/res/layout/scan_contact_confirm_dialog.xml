@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dip">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/info"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="3dip"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_confirm_dialog_title"
+                android:textSize="13dp"
+                android:textColor="#219ac6"
+                android:layout_marginLeft="5dip"
+                android:layout_gravity="bottom"/>
+
+    </LinearLayout>
+    <include layout="@layout/away_day_seperator"/>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dip"
+                  android:paddingRight="5dip">
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="100dip"
+                  android:text="@string/contact_setting_name"
+                  android:gravity="right|center_horizontal"
+                  android:layout_gravity="bottom"
+                  android:paddingRight="10dip"/>
+        <EditText android:layout_height="wrap_content"
+                  android:layout_width="200dip"
+                  android:id="@+id/contact_setting_name_edit_text"
+                  android:hint="@string/contact_setting_hint_name"
+                  android:singleLine="true"
+                  android:imeOptions="actionNext"
+
+                />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dip"
+                  android:paddingRight="5dip">
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="100dip"
+                  android:text="@string/contact_setting_phone"
+                  android:gravity="right|center_horizontal"
+                  android:layout_gravity="bottom"
+                  android:paddingRight="10dip"/>
+        <EditText android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/contact_setting_phone_edit_text"
+                  android:hint="@string/contact_setting_hint_phone"
+                  android:numeric="integer"
+                  android:singleLine="true"
+                  android:imeOptions="actionNext"
+
+                />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dip"
+                  android:paddingRight="5dip">
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="100dip"
+                  android:text="@string/contact_setting_email"
+                  android:gravity="right|center_horizontal"
+                  android:layout_gravity="bottom"
+                  android:paddingRight="10dip"/>
+        <EditText android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/contact_setting_email_edit_text"
+                  android:hint="@string/contact_setting_hint_email"
+                  android:singleLine="true"
+                  android:imeOptions="actionNext"
+
+                />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dip"
+                  android:paddingRight="5dip">
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="100dip"
+                  android:text="@string/contact_setting_skype"
+                  android:gravity="right|center_horizontal"
+                  android:layout_gravity="bottom"
+                  android:paddingRight="10dip"
+                  android:layout_marginBottom="3dip"/>
+        <EditText android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/contact_setting_skype_edit_text"
+                  android:hint="@string/contact_setting_hint_skype"
+                  android:singleLine="true"
+                  android:imeOptions="actionNext"
+                />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dip"
+                  android:paddingRight="5dip">
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="100dip"
+                  android:text="@string/contact_setting_weibo"
+                  android:gravity="right|center_horizontal"
+                  android:layout_gravity="bottom"
+                  android:paddingRight="10dip"
+                  android:layout_marginBottom="3dip"/>
+        <EditText android:layout_height="wrap_content"
+                  android:layout_width="fill_parent"
+                  android:id="@+id/contact_setting_weibo_edit_text"
+                  android:hint="@string/contact_setting_hint_weibo"
+                  android:singleLine="true"
+                  android:imeOptions="actionDone"
+                />
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center|center_horizontal">
+        <Button android:id="@+id/contacts_setting"
+                android:text="@string/contact_setting"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+        <Button android:id="@+id/contacts_scan"
+                android:text="@string/contact_scan"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+    </LinearLayout>
+</LinearLayout>

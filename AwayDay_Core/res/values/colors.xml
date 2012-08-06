@@ -1,4 +1,12 @@
 <resources>
     <color name="map_pop_up_corner">#cc2e2e2e</color>
     <color name="event_details_divider_color">#cc2e2e2e</color>
+    <color name="main_bg_color">#AAAAAA</color>
+    <color name="white">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="transparent">#00000000</color>
 </resources>

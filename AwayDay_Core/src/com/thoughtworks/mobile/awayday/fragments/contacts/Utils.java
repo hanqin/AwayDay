@@ -1,8 +1,11 @@
 package com.thoughtworks.mobile.awayday.fragments.contacts;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.util.Log;
+import android.view.Display;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;
@@ -18,6 +21,18 @@ public class Utils {
     private Context context;
     private static final String FILE_NAME = "contact.txt";
 
+    public static int getDisplayWidth(Activity context){
+        Display display = context.getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        return size.x;
+    }
+    public static int getDisplayHigh(Activity context){
+        Display display = context.getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        return size.y;
+    }
 
     public static Bitmap create2DCode(String str) throws WriterException {
         //生成二维矩阵,编码时指定大小,不要生成了图片以后再进行缩放,这样会模糊导致识别失败
